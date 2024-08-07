@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Movies</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#131A20]">
+   <header class="py-5 bg-[#222933]">
+      <div class="w-[100%] max-w-[1240px] mx-auto px-5">
+         <div class="flex justify-between items-center">
+            <a href="./index.html">
+               <span class="text-[30px] italic text-white font-bold hover:opacity-[0.5]">MOVIES.com</span>
+            </a>
+            <nav>
+               <ul class="flex gap-x-[30px]">
+                  <li><a class="text-[20px] text-[#759EB1] hover:opacity-[0.5]" href="#">Home</a></li>
+                  <li><a class="text-[20px] text-[#759EB1] hover:opacity-[0.5]" href="#">Films</a></li>
+                  <li><a class="text-[20px] text-[#759EB1] hover:opacity-[0.5]" href="#">Year</a></li>
+                  <li><a class="text-[20px] text-[#759EB1] hover:opacity-[0.5]" href="#">Genre</a></li>
+                  <li><a class="text-[20px] text-[#759EB1] hover:opacity-[0.5]" href="#">Country</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div class="w-[100%] max-w-[1240px] mx-auto px-5">
+            <h1 class="sr-only">Interesting movies are all here!</h1>
+            <form class="flex justify-between items-center my-[60px]" action="#" method="GET" autocomplete="off">
+               <input type="search"
+               class="w-[240px] p-[10px] rounded-[5px] bg-[#222933] text-[#759EB1] placeholder:text-[#759EB1]"
+               aria-label="search film"
+               placeholder="Search film...">
+               <select class="w-[240px] p-[10px] rounded-[5px] bg-[#222933] text-[#759EB1]">
+                  <option selected hidden>CHoose genre</option>
+                  <option value="action">Action</option>
+                  <option value="comedy">Comedy</option>
+                  <option value="fantasy">Fantasy</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="science fiction">Science Fiction</option>
+                  <option value="horror">Horror</option>
+                  <option value="thriller">Thriller</option>
+                  <option value="animation">Animation</option>
+                  <option value="family">Family</option>
+                  <option value="documentary">Documentary</option>
+               </select>
+            </form>
+            <h2 class="sr-only">All films</h2>
+            <ul class="js-film-list flex flex-wrap justify-between items-start gap-y-[50px]"></ul>
+         </div>
+      </section>
+   </main>
+
+
+   <script src="films.js"></script>
+   <script src="main.js"></script>
+</body>
+</html>
