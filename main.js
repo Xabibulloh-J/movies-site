@@ -70,6 +70,3 @@ for (var genre of genres) {
 
    elSelect.appendChild(newOption);
 };
-
-
-console.log(genres);
