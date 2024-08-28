@@ -1,4 +1,5 @@
 var elFilmList = document.querySelector(".js-film-list");
+var elSelect = document.querySelector(".js-select");
 
 for (var film of films) {
    
@@ -49,3 +50,26 @@ for (var film of films) {
    
    elFilmList.appendChild(newItem);
 };
+
+
+var genres = [];
+
+films.forEach(item => {
+   item.genres.forEach(genre => {
+      if(!genres.includes(genre)) {
+         genres.push(genre);
+      };
+   });
+});
+
+for (var genre of genres) {
+   var newOption = document.createElement("option");
+
+   newOption.textContent = genre;
+   newOption.value = genre.toLowerCase();
+
+   elSelect.appendChild(newOption);
+};
+
+
+console.log(genres);
